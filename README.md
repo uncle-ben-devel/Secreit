@@ -30,21 +30,15 @@ NOTE: This project is not related to the original research and authors. The only
 #### estrus stage (E): 0.979
 #### proestrus stage (P): 0.962
 
-## Weight parameter
-https://opac.ll.chiba-u.jp/da/curator/108041/weights.hdf5
-
 ## Dataset
 ### Example of file name
- "D_a_14_e1_Auto2_train.png" 
- <br> ①　D: Estrous Stage. When the estrous stage is intermediate class, we described it using "_", such as "D_E".
- <br> ②　a_14_e1: image id
- <br> ③　Auto2: Name of Experiment. Auto2 and Auto3 was used for trainig. Auto1 was for validation and Auto4 is for test. 
+```D_a_14_e1_Auto2_train.png```
+1. ```D ```: Estrous Stage. When the estrous stage is intermediate class, we described it using  ```_ ```, such as  ```D_E ```.
+1. ```a_14_e1```: image id
+1. ```Auto2```: Name of Experiment. ```Auto2``` and ```Auto3``` was used for trainig. ```Auto1``` was for validation and ```Auto4``` is for test. 
 ### Dataset download
-<br> https://opac.ll.chiba-u.jp/da/curator/108041/D_part1.zip  <br> 
-<br> https://opac.ll.chiba-u.jp/da/curator/108041/D_part2.zip <br> 
-<br> https://opac.ll.chiba-u.jp/da/curator/108041/D_part3.zip  <br>
-<br> https://opac.ll.chiba-u.jp/da/curator/108041/E.zip <br>
-<br> https://opac.ll.chiba-u.jp/da/curator/108041/P.zip <br>
-
-
-
+- [Dataset D, Part 1](https://opac.ll.chiba-u.jp/da/curator/108041/D_part1.zip)
+- [Dataset D, Part 2](https://opac.ll.chiba-u.jp/da/curator/108041/D_part2.zip)
+- [Dataset D, Part 3](https://opac.ll.chiba-u.jp/da/curator/108041/D_part3.zip)
+- [Dataset E](https://opac.ll.chiba-u.jp/da/curator/108041/E.zip)
+- [Dataset P](https://opac.ll.chiba-u.jp/da/curator/108041/P.zip)

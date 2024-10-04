@@ -28,7 +28,7 @@ NOTE: This project is not related to the original research and authors. The only
 - You can now pick up the binaries from the ````dist/``` folder.
 
 ## Overview
-![Overview](https://github.com/SanoKyohei/Secreit/blob/master/Example/Overview.png)  
+![Overview](https://github.com/uncle-ben-devel/Secreit/blob/master/Example/Overview.png)
 
 ## Model AUC (Performance)
 #### SECREIT correctly classified competitive to two professionals

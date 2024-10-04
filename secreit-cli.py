@@ -42,8 +42,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "file_path",
         nargs=1,
-        help="The relative or absolute path to the image file to analyze.", 
-        #TODO: which file formats are supported?
+        help="The relative or absolute path to the image file to analyze. JPG, PNG, TIFF and BMP files are supported.",
     )
     parser.add_argument(
         "--disable-result-window",

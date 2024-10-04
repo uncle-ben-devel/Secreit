@@ -7,20 +7,25 @@ Mouse Estrous Cycle Estimation
 NOTE: This project is not related to the original research and authors. The only purpose of it is to make the original code more accessible by providing pre-built binaries.
 
 ## Running the code from the provided binaries (recommended)
-- Download the latest binary from the releases tab
+- Download the latest binaries from the [releases](https://github.com/uncle-ben-devel/Secreit/releases/latest)
 - The program can be run from the command line or via drag-and-drop of image files onto the main binary named ```secreit-cli```
 - To check the available command line options, use ```-h``` or ```--help```
 
 ## Running the code from python
 - Download the model from [here](https://opac.ll.chiba-u.jp/da/curator/108041/weights.hdf5) and put it into a folder named ```models``` within the root of the project (this folder)
 - Install the environment from ```environment.yml``` using conda
+```conda env create -f environment.yml```
 - Activate it
-- ```secreit-cli.py``` is the main program to run
+```conda activate secreit-env```
+- run the program
+```python secreit-cli.py --help```
 
 ## Creating binaries
-- Install the environment as specified in environment.yml using conda
+- Install the environment as like when running the code from python
 - Activate it
 - Run pyinstaller with the provided spec file ```secreit-cli.spec```
+```pyinstaller secreit-cli.spec```
+- You can now pick up the binaries from the ````dist/``` folder.
 
 ## Overview
 ![Overview](https://github.com/SanoKyohei/Secreit/blob/master/Example/Overview.png)  

@@ -65,11 +65,13 @@ def vgg_model(weight_path, input_shape=(240,320,3), input_tensor=None, pooling=N
     return model
 
 def predict(img, model):
-    img=np.array(img)/255
-    img1=img[0:240,0:320,:]    
-    img2=img[0:240,320:640,:]
-    img3=img[240:480,0:320,:]
-    img4=img[240:480,320:640,:]
+    img_:np.ndarray = np.array(img)
+    img_normalized = img_ / np.iinfo(img_.dtype).max
+    input_shape = img_.shape
+    img1=img_normalized[0:240,0:320,:]
+    img2=img_normalized[0:240,320:640,:]
+    img3=img_normalized[240:480,0:320,:]
+    img4=img_normalized[240:480,320:640,:]
     pre=softmax(model.predict_on_batch(np.array([img1, img2, img3, img4])))
     return np.mean(pre, axis=0)
 

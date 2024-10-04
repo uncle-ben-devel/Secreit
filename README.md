@@ -9,6 +9,7 @@ NOTE: This project is not related to the original research and authors. The only
 ## Running the code from the provided binaries (recommended)
 - Download the latest binary from the releases tab
 - The program can be run from the command line or via drag-and-drop of image files onto the main binary named ```secreit-cli```
+- To check the available command line options, use ```-h``` or ```--help```
 
 ## Running the code from python
 - Download the model from [here](https://opac.ll.chiba-u.jp/da/curator/108041/weights.hdf5) and put it into a folder named ```models``` within the root of the project (this folder)

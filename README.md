@@ -25,7 +25,7 @@ NOTE: This project is not related to the original research and authors. The only
 - Activate it
 - Run pyinstaller with the provided spec file ```secreit-cli.spec```
 ```pyinstaller secreit-cli.spec```
-- You can now pick up the binaries from the ````dist/``` folder.
+- You can now pick up the binaries from the ```dist/``` folder.
 
 ## Overview
 ![Overview](https://github.com/uncle-ben-devel/Secreit/blob/master/Example/Overview.png)

@@ -4,7 +4,7 @@ import argparse
 import os
 
 def create_predicition_string(prediction:np.ndarray):
-    return 'D:'+str(round(prediction[0]*100))+'%, E:'+str(round(prediction[1]*100))+'%, P:'+str(round(prediction[2]*100))+'%'
+    return f"""D: {prediction[0]*100:.2f}% E: {prediction[1]*100:.2f}% P: {prediction[2]*100:.2f}% """
 
 def shut_up_tensorflow():
     import logging

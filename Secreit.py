@@ -83,7 +83,7 @@ def predict(img, model):
     img1=img[0:240,0:320,:]    
     img2=img[0:240,320:640,:]
     img3=img[240:480,0:320,:]
-    img4=img[240:480,320:640,:]        
+    img4=img[240:480,320:640,:]
     pre=softmax(model.predict_on_batch(np.array([img1, img2, img3, img4])))
     return np.mean(pre, axis=0)
 
@@ -99,7 +99,11 @@ def grad(img, lay, num, stage, seq3):
         conv_layer_output_value[:, :, ii] *= pooled_grads_value[ii]
     heatmap = np.mean(conv_layer_output_value, axis=-1)
     heatmap = np.maximum(heatmap, 0)
-    heatmap /= np.max(heatmap)
+    print(f"Max: {np.max(heatmap)}")
+    try:
+        heatmap /= np.max(heatmap)
+    except:
+        heatmap /= 1e-10
     return heatmap
 
 

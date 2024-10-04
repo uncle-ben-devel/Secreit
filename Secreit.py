@@ -1,11 +1,5 @@
-from keras import models
-from keras import layers
-import pickle
-from keras.applications import VGG16
-from keras import optimizers
 from keras.preprocessing import image
 import numpy as np
-from keras.layers import Dot
 from keras.models import Model
 from keras.layers import Flatten
 from keras.layers import Dense
@@ -63,20 +57,12 @@ def vgg_model(weight_path, input_shape=(240,320,3), input_tensor=None, pooling=N
     x= Flatten(name='flatten')(x)
     x= Dense(500, activation='relu')(x)
     x= Dense(3, activation='linear')(x)
-   #bilinear CNN
-    # Ensure that the model takes into account
-    # any potential predecessors of `input_tensor`.
-    if input_tensor is not None:
-        inputs = get_source_inputs(input_tensor)
-    else:
-        inputs = img_input
 
     # Create model.
     model=Model(img_input, x, name='seq')
     # load weights
     model.load_weights(weight_path)
     return model
-
 
 def predict(img, model):
     img=np.array(img)/255
@@ -105,7 +91,6 @@ def grad(img, lay, num, stage, seq3):
     except:
         heatmap /= 1e-10
     return heatmap
-
 
 def Cam(img,stage, seq3):
     if stage=="D":

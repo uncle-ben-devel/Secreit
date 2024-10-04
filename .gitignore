@@ -2,6 +2,11 @@
 __pycache__
 .conda/
 
+# pyinstaller
+build/
+dist/
+#*.spec
+
 # big files
 *.hdf5
 data/

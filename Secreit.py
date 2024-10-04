@@ -85,7 +85,6 @@ def grad(img, lay, num, stage, seq3):
         conv_layer_output_value[:, :, ii] *= pooled_grads_value[ii]
     heatmap = np.mean(conv_layer_output_value, axis=-1)
     heatmap = np.maximum(heatmap, 0)
-    print(f"Max: {np.max(heatmap)}")
     try:
         heatmap /= np.max(heatmap)
     except:

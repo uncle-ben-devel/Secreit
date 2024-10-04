@@ -1,4 +1,4 @@
-prefix: .conda
+name: .conda
 channels:
   - defaults
 dependencies:
@@ -16,6 +16,7 @@ dependencies:
   - wincertstore=0.2=py36h7fe50ca_0
   - pip:
       - absl-py==1.4.0
+      - altgraph==0.17.4
       - astor==0.8.1
       - cached-property==1.5.2
       - cycler==0.11.0
@@ -31,12 +32,16 @@ dependencies:
       - markdown==3.3.7
       - matplotlib==3.3.4
       - mock==5.1.0
-      - numpy==1.19.1
+      - numpy==1.16.4
       - opencv-python==4.1.1.26
+      - pefile==2024.8.26
       - pillow==8.4.0
       - protobuf==3.19.6
+      - pyinstaller==4.10
+      - pyinstaller-hooks-contrib==2022.0
       - pyparsing==3.1.4
       - python-dateutil==2.9.0.post0
+      - pywin32-ctypes==0.2.3
       - pyyaml==6.0.1
       - scipy==1.5.4
       - six==1.16.0
@@ -47,3 +52,4 @@ dependencies:
       - typing-extensions==4.1.1
       - werkzeug==2.0.3
       - zipp==3.6.0
+prefix: .conda
